@@ -1,4 +1,4 @@
-## Appointment Scheduler
+## Appointment Scheduling Application
 
 ## Purpose 
 
