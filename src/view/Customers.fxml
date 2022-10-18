@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.Customers"
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="822.0" prefWidth="655.0">
+    <children>
+        <Label layoutX="266.0" layoutY="32.0" text="Customers">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TableView fx:id="customerTableView" layoutX="12.0" layoutY="79.0" prefHeight="322.0" prefWidth="629.0">
+            <columns>
+                <TableColumn fx:id="custIDCol" prefWidth="75.0" text="Customer ID" />
+                <TableColumn fx:id="nameCol" prefWidth="105.0" text="Name" />
+                <TableColumn fx:id="addressCol" prefWidth="125.0" text="Address" />
+                <TableColumn fx:id="postalCodeCol" prefWidth="75.0" text="Postal Code" />
+                <TableColumn fx:id="divisionCol" prefWidth="90.0" text="Division" />
+                <TableColumn fx:id="countryCol" prefWidth="75.0" text="Country" />
+                <TableColumn fx:id="phoneCol" prefWidth="100.0" text="Phone" />
+            </columns>
+        </TableView>
+        <RadioButton fx:id="addCustomerRadio" layoutX="47.0" layoutY="411.0" mnemonicParsing="false" onAction="#addCustomerRadioAction" text="Add Customer" >
+        <toggleGroup>
+            <ToggleGroup fx:id="tgAddUpdateCust" />
+        </toggleGroup></RadioButton>
+        <RadioButton fx:id="updateCustomerRadio" layoutX="227.0" layoutY="411.0" mnemonicParsing="false" onAction="#updateCustomerRadioAction" text="Update Customer" toggleGroup="$tgAddUpdateCust"/>
+        <Button fx:id="deleteCustomerButton" layoutX="402.0" layoutY="407.0" mnemonicParsing="false" onAction="#deleteCustomerButtonAction" text="Delete Customer" />
+
+        <Label layoutX="57.0" layoutY="453.0" text="Customer ID" />
+        <Label layoutX="57.0" layoutY="495.0" text="Name" />
+        <Label layoutX="57.0" layoutY="534.0" text="Address" />
+        <Label layoutX="57.0" layoutY="573.0" text="Postal Code" />
+        <Label layoutX="59.0" layoutY="612.0" text="Phone number" />
+        <Label layoutX="59.0" layoutY="653.0" text="Country" />
+        <Label layoutX="43.0" layoutY="687.0" text="First-level division" />
+
+        <TextField fx:id="custIDTextField" layoutX="165.0" layoutY="449.0" promptText="Disabled - Auto-Gen. "/>
+        <TextField fx:id="nameTextField" layoutX="165.0" layoutY="491.0" />
+        <TextField fx:id="addressTextField" layoutX="165.0" layoutY="530.0" promptText="Street, City"/>
+        <TextField fx:id="postalCodeTextField" layoutX="165.0" layoutY="569.0" />
+        <TextField fx:id="phoneNumberTextField" layoutX="165.0" layoutY="608.0" />
+        <ComboBox fx:id="countryComboBox" layoutX="165.0" layoutY="649.0" prefWidth="150.0" />
+        <ComboBox fx:id="firstLevelDivisionComboBox" layoutX="165.0" layoutY="683.0" prefWidth="150.0" />
+
+        <Button fx:id="saveButton" layoutX="274.0" layoutY="726.0" mnemonicParsing="false" onAction="#saveButtonAction" text="Save" />
+        <Button fx:id="appointmentsButton" layoutX="445.0" layoutY="751.0" mnemonicParsing="false" onAction="#appointmentsButtonAction" text="Appointments" />
+        <Button fx:id="reportsButton" layoutX="556.0" layoutY="751.0" mnemonicParsing="false" onAction="#reportsButtonAction" text="Reports" />
+    </children>
+</AnchorPane>

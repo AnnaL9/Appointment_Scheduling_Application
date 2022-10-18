@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.Reports"
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="822.0"
+            prefWidth="655.0">
+    <Label layoutX="266.0" layoutY="32.0" text="Reports">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <TabPane layoutX="20.0" layoutY="63.0" prefHeight="673.0" prefWidth="614.0" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="Appointments by Month &amp; Type">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="631.0" prefWidth="614.0">
+                <ComboBox fx:id="monthComboBox" layoutX="210.0" layoutY="99.0" prefWidth="150.0" />
+                <ComboBox fx:id="typeComboBox" layoutX="210.0" layoutY="238.0" prefWidth="150.0" />
+                <TextField fx:id="countTextField" layoutX="266.0" layoutY="434.0" prefHeight="25.0" prefWidth="83.0" />
+                <Label layoutX="267.0" layoutY="57.0" text="Month" />
+                <Label layoutX="273.0" layoutY="195.0" text="Type" />
+                <Label layoutX="210.0" layoutY="438.0" text="Count:" />
+                <Button fx:id="submitButton1" layoutX="259.0" layoutY="352.0" mnemonicParsing="false" text="Submit" onAction="#submitButton1Action"/>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Contact Schedule">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <Label layoutX="81.0" layoutY="31.0" text="Contact"/>
+                <ComboBox fx:id="contactComboBox" layoutX="168.0" layoutY="27.0" prefWidth="150.0"/>
+                <Button fx:id="submitButton2" layoutX="355.0" layoutY="27.0" mnemonicParsing="false"
+                        onAction="#submitButton2Action" text="Submit"/>
+                <TableView fx:id="report2TableView" layoutX="23.0" layoutY="77.0" prefHeight="483.0"
+                           prefWidth="569.0">
+                    <columns>
+                        <TableColumn fx:id="apptIDCol2" prefWidth="100.0" text="Appointment ID"/>
+                        <TableColumn fx:id="titleCol2" prefWidth="75.0" text="Title"/>
+                        <TableColumn fx:id="descriptionCol2" prefWidth="75.0" text="Description"/>
+                        <TableColumn fx:id="locationCol2" prefWidth="75.0" text="Location"/>
+                        <TableColumn fx:id="contactCol2" prefWidth="110.0" text="Contact"/>
+                        <TableColumn fx:id="typeCol2" prefWidth="100.0" text="Type"/>
+                        <TableColumn fx:id="startCol2" prefWidth="130.0" text="Start"/>
+                        <TableColumn fx:id="endCol2" prefWidth="130.0" text="End"/>
+                        <TableColumn fx:id="custIDCol2" prefWidth="75.0" text="Customer ID"/>
+                        <TableColumn fx:id="userIDCol2" prefWidth="75.0" text="User ID"/>
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Customers by Location">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="631.0" prefWidth="614.0">
+                <Label layoutX="27.0" layoutY="23.0" text="Country"/>
+                <ComboBox fx:id="countryComboBox" layoutX="82.0" layoutY="19.0" prefWidth="150.0"/>
+                <Label layoutX="255.0" layoutY="23.0" text="First Level Division"/>
+                <ComboBox fx:id="firstLevelDivisionComboBox" layoutX="360.0" layoutY="19.0"
+                          prefWidth="150.0"/>
+                <Button fx:id="submitButton3" layoutX="533.0" layoutY="19.0" mnemonicParsing="false"
+                        onAction="#submitButton3Action" text="Submit"/>
+                <TableView fx:id="report3TableView" layoutX="15.0" layoutY="65.0" prefHeight="540.0"
+                           prefWidth="585.0">
+                    <columns>
+                        <TableColumn fx:id="custIDCol3" prefWidth="75.0" text="Customer ID" />
+                        <TableColumn fx:id="nameCol3" prefWidth="105.0" text="Name" />
+                        <TableColumn fx:id="addressCol3" prefWidth="125.0" text="Address" />
+                        <TableColumn fx:id="postalCodeCol3" prefWidth="75.0" text="Postal Code" />
+                        <TableColumn fx:id="divisionCol3" prefWidth="90.0" text="Division" />
+                        <TableColumn fx:id="countryCol3" prefWidth="75.0" text="Country" />
+                        <TableColumn fx:id="phoneCol3" prefWidth="100.0" text="Phone" />
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+    <Button fx:id="customersButton" layoutX="451.0" layoutY="751.0" mnemonicParsing="false"
+            onAction="#customersButtonAction" text="Customers"/>
+    <Button fx:id="appointmentsButton" layoutX="545.0" layoutY="751.0" mnemonicParsing="false"
+            onAction="#appointmentsButtonAction" text="Appointments"/>
+</AnchorPane>

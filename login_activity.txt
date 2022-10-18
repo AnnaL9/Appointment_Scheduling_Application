@@ -1,0 +1,13 @@
+Username: test Attempted login: 2022-07-19 15:07:09.3140833 Login Successful: true
+Username: admin Attempted login: 2022-07-19 15:09:29.1433143 Login Successful: true
+Username: test Attempted login: 2022-08-04 13:44:15.9902114 Login Successful: true
+Username: test Attempted login: 2022-08-04 14:46:06.2974752 Login Successful: true
+Username: test Attempted login: 2022-08-04 14:46:33.1719569 Login Successful: true
+Username: test Attempted login: 2022-08-04 14:48:43.6028458 Login Successful: true
+Username: test Attempted login: 2022-08-04 14:51:20.939938 Login Successful: true
+Username: test Attempted login: 2022-08-04 14:56:41.8464742 Login Successful: true
+Username: test Attempted login: 2022-08-04 14:58:36.3306242 Login Successful: true
+Username: test Attempted login: 2022-08-04 15:00:58.679547 Login Successful: true
+Username: test Attempted login: 2022-08-04 16:07:46.8682487 Login Successful: true
+Username: user Attempted login: 2022-10-18 18:31:57.2874737 Login Successful: false
+Username: test Attempted login: 2022-10-18 18:32:03.2620938 Login Successful: true
