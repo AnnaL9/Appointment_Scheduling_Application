@@ -11,11 +11,6 @@ This application allows the user to create, update, and delete appointments and 
 - Update paths under Project Structure 
 - Run the application by pressing Shift+F10 or by pressing the green play button in the upper right corner of IntelliJ
 
-
-## Additional Report
-
-The third report in the reports page will show a list of all customers that live in the specified country and first level division with their information. This will allow the user search for customers by their location. 
-
 ## Developer Information & Environment
 
 |===============================================================
